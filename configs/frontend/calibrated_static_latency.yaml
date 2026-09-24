@@ -1,0 +1,49 @@
+name: calibrated_static_latency
+description: Local-whitening latency front end for grayscale images.
+input_type: grayscale_image
+output_channels: 2
+time_steps: 40
+local_whitening:
+  patch_size: 7
+  stride: 2
+  eps: 0.01
+  pca_compress: 1.0
+  max_samples: 1000000
+  fit_batch_images: 64
+polarity_split:
+  enabled: true
+calibration:
+  mode: dataset_feature
+  oracle_compat: true
+signed_context:
+  patch_size: 5
+  alpha: 0.15
+  loser_attenuation: 0.25
+  mixed_ratio_start: 0.2
+  mixed_ratio_end: 0.7
+  energy_gate_start: 0.0
+  energy_gate_end: 0.0
+  channel_gate_start: 0.0
+  channel_gate_end: 0.0
+polarity_reweighting:
+  patch_size: 4
+  positive_dominant_compress: 0.1
+  positive_dominant_negative_boost: 0.15
+  negative_dominant_compress: 0.0
+  negative_dominant_positive_boost: 0.0
+  dominance_margin: 0.1
+pair_compensation:
+  patch_size: 6
+  alpha: 0.1
+  loser_attenuation: 0.25
+  negative_bias: 0.15
+  dominance_margin: 0.1
+  energy_gate_start: 0.6
+  energy_gate_end: 0.9
+  peak_gate_start: 0.0
+  peak_gate_end: 0.0
+response:
+  floor: 0.0
+  gamma: 1.0
+latency_encoding:
+  mode: continuous

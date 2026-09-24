@@ -1,0 +1,20 @@
+name: full_model_fashion_mnist
+description: Full residual/agreement model on Fashion-MNIST.
+dataset:
+  name: fashion_mnist
+  display_name: Fashion-MNIST
+  train_limit: 0
+  test_limit: 0
+frontend:
+  config: configs/frontend/calibrated_static_latency.yaml
+model:
+  config: configs/model/full_residual_agreement_snn.yaml
+  backbone_config: configs/model/four_layer_backbone_fashion_mnist.yaml
+readout:
+  config: configs/model/temporal_readout_fashion_mnist.yaml
+training:
+  seed: 0
+  epochs: 15
+  device: cpu
+output:
+  root: runs/full_model

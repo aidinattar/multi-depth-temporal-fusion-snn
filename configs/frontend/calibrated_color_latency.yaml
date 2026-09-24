@@ -1,0 +1,42 @@
+name: calibrated_color_latency
+description: Local-whitening latency front end for RGB images.
+input_type: rgb_image
+output_channels: 6
+time_steps: 40
+local_whitening:
+  patch_size: 9
+  stride: 2
+  eps: 0.01
+  pca_compress: 1.0
+  max_samples: 1000000
+  fit_batch_images: 64
+polarity_split:
+  enabled: true
+calibration:
+  mode: dataset_feature
+  oracle_compat: true
+signed_context:
+  patch_size: 0
+  alpha: 0.0
+polarity_reweighting:
+  patch_size: 0
+  positive_dominant_compress: 0.0
+  positive_dominant_negative_boost: 0.0
+  negative_dominant_compress: 0.0
+  negative_dominant_positive_boost: 0.0
+  dominance_margin: 0.1
+pair_compensation:
+  patch_size: 6
+  alpha: 0.1
+  loser_attenuation: 0.25
+  negative_bias: 0.15
+  dominance_margin: 0.1
+  energy_gate_start: 0.0
+  energy_gate_end: 0.0
+  peak_gate_start: 0.0
+  peak_gate_end: 0.0
+response:
+  floor: 0.0
+  gamma: 1.0
+latency_encoding:
+  mode: continuous

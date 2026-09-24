@@ -1,0 +1,16 @@
+name: event_surface_latency
+description: >
+  Event-surface latency front end for neuromorphic event streams.
+input_type: event_stream
+output_channels: 10
+time_steps: 120
+event_surface:
+  bins: 5
+  normalize: sample
+  log1p: true
+  gamma: 1.0
+  local_norm_radius: 2
+denoise_filter_time_us: 10000.0
+latency_encoding:
+  enabled: true
+  direct_latency_input: false

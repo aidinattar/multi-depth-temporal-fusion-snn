@@ -1,0 +1,79 @@
+name: four_layer_backbone_cifar10
+description: Four-stage locally trained backbone for CIFAR-10.
+stages:
+  base_evidence:
+    maps: 128
+    kernel_size: 5
+    threshold: 10.0
+    pooling_kernel_size: 4
+    pooling_stride: 4
+    epochs: 18
+    weight_init_mean: 0.5
+    weight_init_std: 0.01
+    weight_init_mode: normal
+    learning_rate_potentiation: 0.1
+    learning_rate_depression: 0.1
+    beta: 1.0
+    threshold_target_time: 0.95
+    threshold_learning_rate: 1.0
+    min_threshold: 2.0
+    annealing: 0.95
+    patch_sampling_space: reference_output
+    initialization_seed: 0
+  residual_evidence:
+    representation: residual_evidence
+    maps: 256
+    kernel_size: 1
+    threshold: 24.0
+    pooling_kernel_size: 2
+    pooling_stride: 1
+    epochs: 3
+    weight_init_mean: 0.3
+    weight_init_std: 0.01
+    weight_init_mode: normal
+    inference_top_k: 32
+    learning_rate_potentiation: 0.1
+    learning_rate_depression: 0.1
+    beta: 1.0
+    threshold_target_time: 0.95
+    threshold_learning_rate: 1.0
+    min_threshold: 4.0
+    annealing: 0.95
+    patch_sampling_space: input_valid
+    initialization_seed: 0
+  deep_transform:
+    representation: deep_transform
+    maps: 256
+    kernel_size: 1
+    threshold: 0.5
+    epochs: 2
+    weight_init_mode: identity
+    identity_gain: 0.45
+    identity_noise_std: 0.01
+    inference_top_k: 64
+    learning_rate_potentiation: 0.003
+    learning_rate_depression: 0.003
+    beta: 0.85
+    threshold_learning_rate: 0.0
+    min_threshold: 0.0
+    annealing: 1.0
+    patch_sampling_space: input_valid
+    initialization_seed: 0
+  deep_correction:
+    representation: deep_correction
+    maps: 256
+    kernel_size: 1
+    threshold: 0.5
+    epochs: 2
+    weight_init_mode: identity
+    identity_gain: 0.45
+    identity_noise_std: 0.01
+    inference_top_k: 64
+    learning_rate_potentiation: 0.003
+    learning_rate_depression: 0.003
+    beta: 0.85
+    threshold_learning_rate: 0.0
+    min_threshold: 0.0
+    annealing: 1.0
+    patch_sampling_space: input_valid
+    initialization_seed: 0

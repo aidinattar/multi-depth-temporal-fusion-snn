@@ -1,0 +1,20 @@
+name: full_model_cifar10
+description: Full residual/agreement model on CIFAR-10.
+dataset:
+  name: cifar10
+  display_name: CIFAR-10
+  train_limit: 0
+  test_limit: 0
+frontend:
+  config: configs/frontend/calibrated_color_latency.yaml
+model:
+  config: configs/model/full_residual_agreement_snn.yaml
+  backbone_config: configs/model/four_layer_backbone_cifar10.yaml
+readout:
+  config: configs/model/temporal_readout_cifar10.yaml
+training:
+  seed: 0
+  epochs: 15
+  device: cpu
+output:
+  root: runs/full_model

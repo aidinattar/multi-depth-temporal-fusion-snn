@@ -1,0 +1,15 @@
+name: full_residual_agreement_snn
+description: >
+  Full model that preserves early evidence and adds sparse selected deep
+  corrections before temporal R-STDP readout.
+fused_sparse_code:
+  residual_evidence:
+    source: residual_evidence
+    max_events_per_sample: 128
+  selected_deep_correction:
+    agreement_sources:
+      - residual_evidence
+      - deep_correction
+    agreement_margin: 0.001
+    max_events_per_sample: 16
+  output_name: fused_sparse_code

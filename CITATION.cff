@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "Multi-Depth Temporal Fusion utilizing residual- and consensus-inspired agreement feature routing"
+type: software
+authors:
+  - family-names: Attar
+    given-names: Aidin
+  - family-names: Cicciarella
+    given-names: Eleonora
+  - family-names: Rossi
+    given-names: Michele
+version: 0.1.0
+date-released: 2026-09-24
+license: MIT
+preferred-citation:
+  type: article
+  title: "Multi-Depth Temporal Fusion utilizing residual- and consensus-inspired agreement feature routing"
+  authors:
+    - family-names: Attar
+      given-names: Aidin
+    - family-names: Cicciarella
+      given-names: Eleonora
+    - family-names: Rossi
+      given-names: Michele
+  year: 2026

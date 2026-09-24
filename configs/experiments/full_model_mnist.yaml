@@ -1,0 +1,20 @@
+name: full_model_mnist
+description: Full residual/agreement model on MNIST.
+dataset:
+  name: mnist
+  display_name: MNIST
+  train_limit: 0
+  test_limit: 0
+frontend:
+  config: configs/frontend/calibrated_static_latency.yaml
+model:
+  config: configs/model/full_residual_agreement_snn.yaml
+  backbone_config: configs/model/four_layer_backbone_mnist.yaml
+readout:
+  config: configs/model/temporal_readout_mnist.yaml
+training:
+  seed: 0
+  epochs: 12
+  device: cpu
+output:
+  root: runs/full_model

@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "temporal-evidence-snn"
+version = "0.1.0"
+description = "Residual/agreement spiking networks with local STDP and temporal R-STDP."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Aidin Attar" },
+  { name = "Eleonora Cicciarella" },
+  { name = "Michele Rossi" },
+]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = [
+  "spiking-neural-networks",
+  "STDP",
+  "R-STDP",
+  "time-to-first-spike",
+  "neuromorphic-computing",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy",
+  "pyyaml",
+  "torch",
+]
+
+[project.optional-dependencies]
+torchvision-data = [
+  "torchvision",
+]
+test = [
+  "pytest>=8",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,21 @@
+name: full_model_nmnist
+description: Full residual/agreement model on N-MNIST.
+dataset:
+  name: nmnist
+  display_name: N-MNIST
+  train_limit: 0
+  test_limit: 0
+frontend:
+  config: configs/frontend/event_surface_latency.yaml
+model:
+  config: configs/model/full_residual_agreement_snn.yaml
+  backbone_config: configs/model/four_layer_backbone_nmnist.yaml
+readout:
+  config: configs/model/temporal_readout_nmnist.yaml
+  shuffle_train: true
+training:
+  seed: 0
+  epochs: 16
+  device: cpu
+output:
+  root: runs/full_model

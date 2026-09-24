@@ -1,0 +1,42 @@
+network:
+  - n_neurons: 60
+    firing_threshold: 243.0
+    w_init_normal: true
+    w_init_mean: 0.3
+    w_init_std: 0.01
+    w_norm: true
+    w_min: 0.0
+    w_max: 1.0
+    forward_mode: vectorized
+optimizer:
+  method: rstdp
+  mode: temporal_target_hard_negative_multiproto
+  stdp: additive
+  ap: 0.1
+  am: -0.05
+  adaptive_lr: false
+  annealing: 0.75
+  update_silent_target: false
+  non_target_scale: 0.35
+  update_scale: 1.0
+  temporal_margin: 0.005
+  temporal_scale_cap: 0.003
+  temporal_contrast_target_scale: 2.0
+  temporal_floor_scale: 0.0
+  temporal_stability_min_spikes: 36.0
+  temporal_guard_anti_scale: 0.0
+  temporal_guard_target_scale: 1.25
+  temporal_correct_update_scale: 0.005
+  temporal_confident_correct_scale: 0.0
+  temporal_hard_negative_k: 9
+  temporal_target_prototypes: 1
+  temporal_negative_prototypes: 3
+  temporal_prototype_decay: 0.5
+  temporal_anti_update_scale: 1.0
+regularizer:
+  thr_lr: 5.0
+  thr_anneal: 0.5
+trainer:
+  epochs: 16
+  nt_neurons: 1
+  early_stopping: 0
