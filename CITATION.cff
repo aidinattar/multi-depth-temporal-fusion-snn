@@ -1,25 +1,35 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the accompanying paper."
-title: "Multi-Depth Temporal Fusion utilizing residual- and consensus-inspired agreement feature routing"
+title: "Multi-Depth Temporal Fusion for Feedforward, Locally Trained Spiking Neural Networks"
 type: software
 authors:
   - family-names: Attar
     given-names: Aidin
+    orcid: https://orcid.org/0009-0008-7343-5407
   - family-names: Cicciarella
     given-names: Eleonora
+    orcid: https://orcid.org/0009-0003-0267-341X
   - family-names: Rossi
     given-names: Michele
-version: 0.1.0
+    orcid: https://orcid.org/0000-0003-1121-324X
+doi: https://doi.org/10.48550/arXiv.2609.37047
+url: "https://arxiv.org/abs/2609.37047"
+version: 1.0.0
 date-released: 2026-09-24
 license: MIT
 preferred-citation:
   type: article
-  title: "Multi-Depth Temporal Fusion utilizing residual- and consensus-inspired agreement feature routing"
+  title: "Multi-Depth Temporal Fusion for Feedforward, Locally Trained Spiking Neural Networks"
   authors:
     - family-names: Attar
       given-names: Aidin
+      orcid: https://orcid.org/0009-0008-7343-5407
     - family-names: Cicciarella
       given-names: Eleonora
+      orcid: https://orcid.org/0009-0003-0267-341X
     - family-names: Rossi
       given-names: Michele
+      orcid: https://orcid.org/0000-0003-1121-324X
   year: 2026
+  doi: https://doi.org/10.48550/arXiv.2609.37047
+  url: "https://arxiv.org/abs/2609.37047"
