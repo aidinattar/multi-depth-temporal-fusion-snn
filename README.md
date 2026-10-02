@@ -1,6 +1,6 @@
 # Multi-Depth Temporal Fusion for Feedforward, Locally Trained Spiking Neural Networks
 
-Code for the experiments in *Multi-Depth Temporal Fusion utilizing residual- and consensus-inspired agreement feature routing*.
+Code for the experiments in *Multi-Depth Temporal Fusion for Feedforward, Locally Trained Spiking Neural Networks*.
 
 ## Installation
 
