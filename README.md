@@ -53,16 +53,15 @@ python -m pip install -e '.[test]'
 pytest -q
 ```
 
-## Citation
-<!-- 
+## Citation 
 ```bibtex
-@article{attar2026multidepth,
-  title         = {Multi-Depth Temporal Fusion utilizing residual- and consensus-inspired agreement feature routing},
-  author        = {Attar, Aidin and Cicciarella, Eleonora and Rossi, Michele},
-  journal       = {arXiv preprint arXiv:2609.XXXXX},
-  year          = {2026},
-  eprint        = {2609.XXXXX},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.NE}
+@misc{attar2026multidepthtemporalfusionfeedforward,
+      title={Multi-Depth Temporal Fusion for Feedforward, Locally Trained Spiking Neural Networks}, 
+      author={Aidin Attar and Eleonora Cicciarella and Michele Rossi},
+      year={2026},
+      eprint={2609.37047},
+      archivePrefix={arXiv},
+      primaryClass={cs.NE},
+      url={https://arxiv.org/abs/2609.37047}, 
 }
-``` -->
+```
